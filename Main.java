@@ -11,7 +11,7 @@ public class Main
         System.out.print("Enter the filename: ");
         filename = sc.next();
         List<Centres> CCentres = Load(filename);
-        System.out.print("Displaying all the community centres: ");
+        System.out.println("Displaying all the community centres: ");
         for (Centres c: CCentres)
         {
             System.out.println(c);
