@@ -1,3 +1,4 @@
+//contains all the fields/attributes of the community centres that are listed in the file
 public class Centres
 {
     private int FID;
@@ -5,11 +6,9 @@ public class Centres
     private String name;
     private float X;
     private float Y;
-    private double dist;
+    private double dist;        //distance between user-entered lat/long and community centres
 
-    public Centres()
-    {
-    }
+    //overloaded constructor
     public Centres(int FID, String address, String name, float X, float Y)
     {
         this.FID = FID;
@@ -18,6 +17,7 @@ public class Centres
         this.X = X;
         this.Y = Y;
     }
+    //used when distance is calculated
     public Centres(int FID, String address, String name, float X, float Y, double dist)
     {
         this.FID = FID;
@@ -84,6 +84,7 @@ public class Centres
     {
         return "FID: " + FID + ", Address: " + address + ", Name: " + name + ", X: " + X + ", Y: " + Y;
     }
+    //to print out distances
     public void toString2()
     {
         System.out.println("FID: " + FID + ", Address: " + address + ", Name: " + name + ", X: " + X + ", Y: " + Y + ", Distance (in km): " + dist);
