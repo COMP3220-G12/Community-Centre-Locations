@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Distance {
-    float lat1;
-    float lon1;
-    List<Centres> cCentres;
+    private float lat1;
+    private float lon1;
+    private List<Centres> cCentres;
 
     //overloaded constructor to set values
     public Distance(float lat1, float lon1, List<Centres> cCentres)
