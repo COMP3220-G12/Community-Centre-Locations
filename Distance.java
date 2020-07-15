@@ -48,7 +48,7 @@ public class Distance {
             dist = Math.acos(dist);
             dist = Math.toDegrees(dist);
             dist = dist * 60 * 1.1515;
-            dist = dist * 1.609344;     //km}
+            dist = dist * 1.609344;     //km
         }
         return (dist);
     }
