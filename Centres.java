@@ -74,9 +74,9 @@ public class Centres
     {
         this.Y = Y;
     }
-    public void setDist(int dis)
+    public void setDist(float dist)
     {
-        this.dist = dis;
+        this.dist = dist;
     }
 
     //override toString
