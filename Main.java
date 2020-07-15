@@ -16,7 +16,7 @@ public class Main
         System.out.println("Number of records loaded: " + CCentres.size());
         //display menu
         System.out.println("1. Display All Records.");
-        System.out.println("2. Display Flood Services History using Street Name.");
+        System.out.println("2. Find nearest Community Centre.");
         System.out.println("0. Quit");
 
         //Variables for menu
