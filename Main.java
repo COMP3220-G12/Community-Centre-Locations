@@ -13,6 +13,7 @@ public class Main
         filename = sc.next();
         //load file
         List<Centres> CCentres = Load(filename);
+        System.out.println("Number of records loaded: " + CCentres.size());
         //display menu
         System.out.println("1. Display All Records.");
         System.out.println("2. Display Flood Services History using Street Name.");
@@ -46,10 +47,14 @@ public class Main
                     //calculate list of nearest community centres
                     Distance nearest = new Distance(lat1, lon1, CCentres);
                     List<Centres> nearCentres = nearest.near(CCentres);
-                    System.out.println("Community Centres that are 5km or less to your location are: ");
-                    for (Centres i: nearCentres)
-                    {
-                        i.toString2();
+                    if (nearCentres.size() == 0)
+                        System.out.println("There are NO Community Centres that are 5km or less to your location.");
+                    else {
+                        System.out.println("Community Centres that are 5km or less to your location are: ");
+                        for (Centres i: nearCentres)
+                        {
+                            i.toString2();
+                        }
                     }
                     break;
 
