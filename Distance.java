@@ -36,7 +36,7 @@ public class Distance {
     }
 
     //calculate distances
-    //Formula for Lat/Long distance is refernces from https://www.geodatasource.com/developers/java?fbclid=IwAR3vPYGFqOiHUhB-GdtmO-7QYNmrsOLhgVwroIGV8HK0pKznrqNCkj6wiFY
+    //Formula for Lat/Long distance is referenced from https://www.geodatasource.com/developers/java?fbclid=IwAR3vPYGFqOiHUhB-GdtmO-7QYNmrsOLhgVwroIGV8HK0pKznrqNCkj6wiFY
     public double calcDist(double lat2, double lon2, List<Centres> cCentres)
     {
         double dist = 0;
