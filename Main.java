@@ -7,7 +7,7 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
         String filename;
-        float lat1, lon1;       //user entered latitude and longitude
+        double lat1, lon1;       //user entered latitude and longitude
         //ask user to enter filename
         System.out.print("Enter the filename: ");
         filename = sc.next();
@@ -41,9 +41,9 @@ public class Main
                 //User can enter an address they want to find community centres near
                 case 2:
                     System.out.print("Enter latitude of your address: ");
-                    lat1 = sc.nextFloat();
+                    lat1 = sc.nextDouble();
                     System.out.print("Enter longitude of your address: ");
-                    lon1 = sc.nextFloat();
+                    lon1 = sc.nextDouble();
                     //calculate list of nearest community centres
                     Distance nearest = new Distance(lat1, lon1, CCentres);
                     List<Centres> nearCentres = nearest.near(CCentres);
@@ -96,8 +96,8 @@ public class Main
         int FID = Integer.parseInt(data[0]);
         String address = data[1];
         String name = data[2];
-        float X = Float.parseFloat(data[3]);
-        float Y = Float.parseFloat(data[4]);
+        double X = Double.parseDouble(data[3]);
+        double Y = Double.parseDouble(data[4]);
 
         return new Centres(FID, address, name, X, Y);
     }
