@@ -4,12 +4,12 @@ public class Centres
     private int FID;
     private String address;
     private String name;
-    private float X;
-    private float Y;
+    private double X;
+    private double Y;
     private double dist;        //distance between user-entered lat/long and community centres
 
     //overloaded constructor
-    public Centres(int FID, String address, String name, float X, float Y)
+    public Centres(int FID, String address, String name, double X, double Y)
     {
         this.FID = FID;
         this.address = address;
@@ -18,7 +18,7 @@ public class Centres
         this.Y = Y;
     }
     //used when distance is calculated
-    public Centres(int FID, String address, String name, float X, float Y, double dist)
+    public Centres(int FID, String address, String name, double X, double Y, double dist)
     {
         this.FID = FID;
         this.address = address;
@@ -40,11 +40,11 @@ public class Centres
     {
         return name;
     }
-    public float getX()
+    public double getX()
     {
         return X;
     }
-    public float getY()
+    public double getY()
     {
         return Y;
     }
@@ -66,15 +66,15 @@ public class Centres
     {
         this.name = name;
     }
-    public void setX(float X)
+    public void setX(double X)
     {
         this.X = X;
     }
-    public void setY(float Y)
+    public void setY(double Y)
     {
         this.Y = Y;
     }
-    public void setDist(float dist)
+    public void setDist(double dist)
     {
         this.dist = dist;
     }
