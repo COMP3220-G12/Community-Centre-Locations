@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Distance {
-    private float lat1;
-    private float lon1;
+    private double lat1;
+    private double lon1;
     private List<Centres> cCentres;
 
     //overloaded constructor to set values
-    public Distance(float lat1, float lon1, List<Centres> cCentres)
+    public Distance(double lat1, double lon1, List<Centres> cCentres)
     {
         this.lat1 = lat1;
         this.lon1 = lon1;
@@ -22,8 +22,8 @@ public class Distance {
         for(Centres i: cCentres)
         {
             //latitude and longitude for each centre
-            float lat2 = i.getY();
-            float lon2 = i.getX();
+            double lat2 = i.getY();
+            double lon2 = i.getX();
             //distance
             double dist = calcDist(lat2, lon2, cCentres);
             if(dist<=5)
@@ -37,7 +37,7 @@ public class Distance {
 
     //calculate distances
     //Formula for Lat/Long distance is refernces from https://www.geodatasource.com/developers/java?fbclid=IwAR3vPYGFqOiHUhB-GdtmO-7QYNmrsOLhgVwroIGV8HK0pKznrqNCkj6wiFY
-    public double calcDist(float lat2, float lon2, List<Centres> cCentres)
+    public double calcDist(double lat2, double lon2, List<Centres> cCentres)
     {
         double dist = 0;
         if (lat1==lat2 && lon1==lon2)
